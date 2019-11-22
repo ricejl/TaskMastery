@@ -2,7 +2,7 @@ import List from "./Models/List.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: []
+  lists: [new List({ title: "Groceries", items: [] })]
 };
 
 //NOTE You should not need to change the code from this point down
@@ -37,5 +37,5 @@ class Store {
   }
 }
 
-const store = new Store();
-export default store;
+const STORE = new Store();
+export default STORE;

@@ -6,6 +6,8 @@ function _drawLists() {}
 //Public
 export default class ListController {
   constructor() {
+    console.log("hello from controller");
+
     //NOTE: After the store loads, we can automatically call to draw the lists.
     _drawLists();
   }
