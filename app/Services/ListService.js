@@ -2,9 +2,7 @@ import List from "../Models/List.js";
 
 //Public
 class ListService {
-  constructor() {
-    console.log("hello from service");
-  }
+  constructor() {}
   //TODO  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?

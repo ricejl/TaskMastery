@@ -13,7 +13,7 @@ export default class List {
     return `
     <div class="col-3">
           <div class="card">
-            <h5 class="card-header">Featured</h5>
+            <h5 class="card-header">${this.title}</h5>
             <div class="card-body">
               <ul class="card-text">
                 <li>item</li>

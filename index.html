@@ -8,8 +8,14 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+      integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Listmon</title>
+    <title>Task Mastery</title>
   </head>
 
   <body>
@@ -20,8 +26,29 @@
         </div>
       </div>
     </header>
-    <main class="container-fluid">
-      <div class="row bg-secondary pr-3 pl-3 pt-4 pb-4 main-height">
+    <main class="container-fluid bg-secondary">
+      <div id="add-list" class="row p-3 pr-5">
+        <!-- start SECTION insert add-list template -->
+        <div class="col-4">
+          <form onsubmit="app.listController.addList(event)">
+            <div class="d-flex align-items-center">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="form-control pr-5"
+                placeholder="New list title..."
+              />
+              <button type="submit" class="btn-blank">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- end SECTION add-list template -->
+      </div>
+      <div id="lists" class="row pr-3 pl-3 pb-4 main-height">
+        <!-- start SECTION insert lists template -->
         <div class="col-3">
           <div class="card">
             <h5 class="card-header">Featured</h5>
@@ -35,6 +62,7 @@
             </div>
           </div>
         </div>
+        <!-- end SECTION lists template -->
       </div>
     </main>
     <footer class="container-fluid">
