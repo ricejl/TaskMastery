@@ -27,10 +27,9 @@
       </div>
     </header>
     <main class="container-fluid bg-secondary">
-      <div id="add-list" class="row p-3 pr-5">
-        <!-- start SECTION insert add-list template -->
-        <div class="col-4">
-          <form onsubmit="app.listController.addList(event)">
+      <div class="row p-3 pr-5">
+        <div id="add-list" class="col-4">
+          <form onsubmit="app.listController.addList(event, '${this.listId}')">
             <div class="d-flex align-items-center">
               <input
                 type="text"
@@ -45,7 +44,6 @@
             </div>
           </form>
         </div>
-        <!-- end SECTION add-list template -->
       </div>
       <div id="lists" class="row pr-3 pl-3 pb-4 main-height">
         <!-- start SECTION insert lists template -->
