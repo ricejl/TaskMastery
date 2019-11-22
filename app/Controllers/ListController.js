@@ -1,7 +1,10 @@
 import ListService from "../Services/ListService.js";
 
 //TODO Don't forget to render to the screen after every data change.
-function _drawLists() {}
+function _drawLists() {
+  let template = ""
+  let list = 
+}
 
 //Public
 export default class ListController {
