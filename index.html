@@ -28,13 +28,13 @@
     </header>
     <main class="container-fluid bg-secondary">
       <div class="row p-3 pr-5">
-        <div id="add-list" class="col-4">
-          <form onsubmit="app.listController.addList(event, '${this.listId}')">
+        <div id="add-list" class="col-12 col-sm-6 col-md-4">
+          <form onsubmit="app.listController.addList(event)">
             <div class="d-flex align-items-center">
               <input
                 type="text"
-                name=""
-                id=""
+                name="title"
+                id="title"
                 class="form-control pr-5"
                 placeholder="New list title..."
               />
@@ -47,21 +47,35 @@
       </div>
       <div id="lists" class="row pr-3 pl-3 pb-4 main-height">
         <!-- start SECTION insert lists template -->
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card">
             <h5 class="card-header">Featured</h5>
             <div class="card-body">
-              <ul class="card-text">
-                <li>item</li>
-                <li>item</li>
+              <ul id="items" class="card-text">
                 <li>item</li>
               </ul>
-              <a href="#" class="btn btn-info">Add</a>
+              <!-- SECTION form within list -->
+              <form onsubmit="app.listController.addItem(event)">
+                <div class="d-flex align-items-center">
+                  <input
+                    type="text"
+                    name="item"
+                    id="item"
+                    class="form-control pr-5"
+                    placeholder="New task..."
+                  />
+                  <button type="submit" class="btn-blank">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
         <!-- end SECTION lists template -->
       </div>
+</div>
+
     </main>
     <footer class="container-fluid">
       <div class="row bg-dark text-light text-center p-3">

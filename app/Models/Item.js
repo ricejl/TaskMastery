@@ -7,8 +7,9 @@ export default class Item {
     this.listId = listId;
   }
 
-  // TODO write getter
-  // get template() {
-  //     return ``
-  // }
+  get template() {
+    return `
+            <li>${this.item}</li>
+    `;
+  }
 }
