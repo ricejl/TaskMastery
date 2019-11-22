@@ -17,7 +17,6 @@ export default class ListController {
   }
 
   addList(event) {
-    // debugger;
     event.preventDefault();
     let formData = event.target;
     let newList = {
@@ -29,11 +28,12 @@ export default class ListController {
     _drawLists();
   }
 
-  addItem(event) {
+  addItem(event, listId) {
     event.preventDefault();
     let formData = event.target;
     let newItem = {
-      item: formData.item.value
+      item: formData.item.value,
+      listId: listId
     };
 
     _listService.addItem(newItem);

@@ -1,5 +1,3 @@
-import _list from "../Models/List.js";
-import _item from "../Models/Item.js";
 import _store from "../store.js";
 import List from "../Models/List.js";
 import Item from "../Models/Item.js";
@@ -16,8 +14,8 @@ class ListService {
 
   addItem(itemData) {
     let item = new Item(itemData);
-    let foundItem = _store.State.lists.find(list => list.listId == item.listId);
-    foundItem.lists.push(item); //FIXME
+    let foundItem = _store.State.lists.find(list => list.id == item.listId);
+    foundItem.items.push(item); //FIXME
     _store.saveState();
   }
   //TODO  Here is where we handle all of our business logic,

@@ -2,9 +2,9 @@ import { generateId } from "../utils.js";
 import Item from "./Item.js";
 
 export default class List {
-  constructor({ listId = generateId(), title, items = [] }) {
+  constructor({ id = generateId(), title, items = [] }) {
     //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
-    this.listId = listId;
+    this.id = id;
     this.title = title;
     this.items = items.map(i => new Item(i));
   }
@@ -16,9 +16,9 @@ export default class List {
             <h5 class="card-header">${this.title}</h5>
             <div class="card-body">
               <ul class="card-text">
-                <li>item</li>
+                ${this.drawItems()}
               </ul>
-              <form onsubmit="app.listController.addItem(event, '${this.listId}')">
+              <form onsubmit="app.listController.addItem(event, '${this.id}')">
                 <div class="d-flex align-items-center">
                   <input
                     type="text"
@@ -36,6 +36,13 @@ export default class List {
           </div>
         </div>`;
   }
+
+  drawItems() {
+    let template = "";
+    this.items.forEach(item => (template += item.template));
+    return template;
+  }
+  // FIXME to write items into list use ${this.drawItems()}
   //Be sure to add the methods needed to create the view template for this model
   //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
 }
