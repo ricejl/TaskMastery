@@ -15,13 +15,13 @@ class ListService {
   addItem(itemData) {
     let item = new Item(itemData);
     let foundItem = _store.State.lists.find(list => list.id == item.listId);
-    foundItem.items.push(item); //FIXME
+    foundItem.items.push(item);
     _store.saveState();
   }
 
   deleteItem(listId, itemId) {
     let foundList = _store.State.lists.find(list => list.id == listId);
-    foundList.items = foundList.items.filter(item => item.itemId == itemId);
+    foundList.items = foundList.items.filter(item => item.itemId != itemId);
     _store.saveState();
   }
   //TODO  Here is where we handle all of our business logic,

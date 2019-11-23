@@ -1,4 +1,4 @@
-import _listService from "../Services/ListService.js";
+import ListService from "../Services/ListService.js";
 import _store from "../store.js";
 
 //TODO Don't forget to render to the screen after every data change.
@@ -23,7 +23,7 @@ export default class ListController {
       title: formData.title.value
     };
 
-    _listService.addList(newList);
+    ListService.addList(newList);
     formData.reset();
     _drawLists();
   }
@@ -36,13 +36,14 @@ export default class ListController {
       listId: listId
     };
 
-    _listService.addItem(newItem);
+    ListService.addItem(newItem);
     formData.reset();
     _drawLists();
   }
 
   deleteItem(listId, itemId) {
-    _listService.deleteItem(listId, itemId);
+    ListService.deleteItem(listId, itemId);
+    _drawLists();
   }
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }
