@@ -18,6 +18,12 @@ class ListService {
     foundItem.items.push(item); //FIXME
     _store.saveState();
   }
+
+  deleteItem(listId, itemId) {
+    let foundList = _store.State.lists.find(list => list.id == listId);
+    foundList.items = foundList.items.filter(item => item.itemId == itemId);
+    _store.saveState();
+  }
   //TODO  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?
