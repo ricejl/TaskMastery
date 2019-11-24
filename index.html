@@ -53,7 +53,13 @@
             <div class="card-body">
               <ul id="items" class="card-text">
                 <li>item</li>
-                <button class="btn btn-danger" type="button" onclick="app.ListController.deleteItem()">delete</button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                  onclick="app.ListController.deleteItem()"
+                >
+                  delete
+                </button>
               </ul>
               <!-- SECTION form within list -->
               <form onsubmit="app.listController.addItem(event)">
@@ -75,8 +81,55 @@
         </div>
         <!-- end SECTION lists template -->
       </div>
-</div>
 
+      <div class="row">
+        <div class="col">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="card">
+              <h5 class="card-header">
+                Featured
+                <!-- start of list delete btn; TODO copy into list template -->
+                <button
+                  type="button"
+                  class="btn-blank"
+                  onclick="app.ListController.deleteList()"
+                >
+                  <i class="fa fa-times"></i>
+                </button>
+                <!-- end of delete list btn -->
+              </h5>
+
+              <div class="card-body">
+                <ul id="items" class="card-text">
+                  <li>item</li>
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                    onclick="app.ListController.deleteItem()"
+                  >
+                    delete
+                  </button>
+                </ul>
+                <!-- SECTION form within list -->
+                <form>
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="text"
+                      name="item"
+                      id="item"
+                      class="form-control pr-5"
+                      placeholder="New task..."
+                    />
+                    <button type="submit" class="btn-blank">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="container-fluid">
       <div class="row bg-dark text-light text-center p-3">

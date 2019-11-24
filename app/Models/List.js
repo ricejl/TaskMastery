@@ -13,7 +13,14 @@ export default class List {
     return `
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card">
-            <h5 class="card-header">${this.title}</h5>
+            <h5 class="card-header">${this.title}
+              <button
+                  type="button"
+                  class="btn-blank"
+                  onclick="app.listController.deleteList('${this.id}')"
+                >
+                  <i class="fa fa-times"></i>
+                </button></h5>
             <div class="card-body">
               <ul class="card-text">
                 ${this.drawItems()}
@@ -26,6 +33,7 @@ export default class List {
                     id="item"
                     class="form-control pr-5"
                     placeholder="New task..."
+                    required
                   />
                   <button type="submit" class="btn-blank">
                     <i class="fa fa-plus"></i>

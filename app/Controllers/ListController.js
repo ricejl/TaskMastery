@@ -45,5 +45,10 @@ export default class ListController {
     ListService.deleteItem(listId, itemId);
     _drawLists();
   }
+
+  deleteList(listId) {
+    ListService.deleteList(listId);
+    _drawLists();
+  }
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }
