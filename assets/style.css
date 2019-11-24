@@ -26,6 +26,7 @@ label[for="item"] {
 
 input[type="checkbox"]:checked + label {
   text-decoration: line-through;
+  color: var(--secondary);
 }
 
 /* SECTION button styling */
