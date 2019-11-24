@@ -2,6 +2,12 @@
   min-height: 70vh;
 }
 
+.card {
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+}
+
+/* SECTION button styling */
 .btn-blank {
   background: transparent;
   border: none;
@@ -15,14 +21,12 @@
   opacity: 0.9;
 }
 
-.card {
-  display: inline-block;
-  -webkit-column-break-inside: avoid;
+li > .btn-blank {
+  right: 1.7em;
 }
 
-li > .btn-blank,
 #add-item > .btn-blank {
-  right: 1.7em;
+  right: 1.6em;
 }
 
 .card-header > .btn-blank {
@@ -31,4 +35,9 @@ li > .btn-blank,
 
 .card-header > .btn-blank:hover {
   color: rgb(165, 65, 65);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0.8em;
 }

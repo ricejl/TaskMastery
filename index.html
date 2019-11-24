@@ -49,14 +49,13 @@
       <div class="row pr-3 pl-3 pb-4 main-height">
         <div class="col">
           <div id="lists" class="card-columns">
-            <!-- SECTION insert lists template -->
+            <!-- SECTION lists template inserts here -->
           </div>
         </div>
       </div>
 
       <!-- ---------------------------------------------------------------------------------------------------- -->
-
-      <!-- TODO insert col and card-columns below row, move id="lists" to card-columns -->
+      <!-- NOTE row below is for experimenting with CSS - delete after using -->
 
       <div class="row">
         <div class="col">
@@ -64,7 +63,6 @@
             <div class="card">
               <h5 class="card-header">
                 Featured
-                <!-- start of list delete btn; TODO format and copy into list template -->
                 <button
                   type="button"
                   class="btn-blank"
@@ -72,12 +70,12 @@
                 >
                   <i class="fa fa-trash"></i>
                 </button>
-                <!-- end of delete list btn -->
               </h5>
 
               <div class="card-body">
                 <ul id="items" class="card-text">
                   <li>
+                    <input type="checkbox" />
                     item
                     <button
                       class="btn-blank"
@@ -88,7 +86,7 @@
                     </button>
                   </li>
                 </ul>
-                <!-- SECTION form within list -->
+                <!-- SECTION add items form within list -->
                 <form>
                   <div id="add-item" class="d-flex align-items-center">
                     <input
@@ -105,103 +103,11 @@
                 </form>
               </div>
             </div>
-            <div class="card">
-              <h5 class="card-header">Featured</h5>
-              <div class="card-body">
-                <ul class="card-text">
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                  <button
-                    class="btn btn-danger"
-                    type="button"
-                    onclick="app.ListController.deleteItem()"
-                  >
-                    delete
-                  </button>
-                </ul>
-                <!-- SECTION form within list -->
-                <form onsubmit="app.listController.addItem(event)">
-                  <div class="d-flex align-items-center">
-                    <input
-                      type="text"
-                      name="item"
-                      id="item"
-                      class="form-control pr-5"
-                      placeholder="New task..."
-                    />
-                    <button type="submit" class="btn-blank">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-header">Featured</h5>
-              <div class="card-body">
-                <ul class="card-text">
-                  <li>item</li>
-                  <button
-                    class="btn btn-danger"
-                    type="button"
-                    onclick="app.ListController.deleteItem()"
-                  >
-                    delete
-                  </button>
-                </ul>
-                <!-- SECTION form within list -->
-                <form onsubmit="app.listController.addItem(event)">
-                  <div class="d-flex align-items-center">
-                    <input
-                      type="text"
-                      name="item"
-                      id="item"
-                      class="form-control pr-5"
-                      placeholder="New task..."
-                    />
-                    <button type="submit" class="btn-blank">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-header">Featured</h5>
-              <div class="card-body">
-                <ul class="card-text">
-                  <li>item</li>
-                  <button
-                    class="btn btn-danger"
-                    type="button"
-                    onclick="app.ListController.deleteItem()"
-                  >
-                    delete
-                  </button>
-                </ul>
-                <!-- SECTION form within list -->
-                <form onsubmit="app.listController.addItem(event)">
-                  <div class="d-flex align-items-center">
-                    <input
-                      type="text"
-                      name="item"
-                      id="item"
-                      class="form-control pr-5"
-                      placeholder="New task..."
-                    />
-                    <button type="submit" class="btn-blank">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
+      <!-- ----------------------------------------------------------------------------------------------------------- -->
     </main>
     <footer class="container-fluid">
       <div class="row bg-dark text-light text-center p-3">

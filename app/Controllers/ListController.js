@@ -42,6 +42,9 @@ export default class ListController {
   }
 
   deleteItem(listId, itemId) {
+    if (!window.confirm("Delete item?")) {
+      return;
+    }
     ListService.deleteItem(listId, itemId);
     _drawLists();
   }
