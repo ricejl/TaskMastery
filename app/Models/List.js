@@ -11,7 +11,6 @@ export default class List {
 
   get template() {
     return `
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card">
             <h5 class="card-header">${this.title}
               <button
@@ -19,14 +18,14 @@ export default class List {
                   class="btn-blank"
                   onclick="app.listController.deleteList('${this.id}')"
                 >
-                  <i class="fa fa-times"></i>
+                  <i class="fa fa-trash"></i>
                 </button></h5>
             <div class="card-body">
               <ul class="card-text">
                 ${this.drawItems()}
               </ul>
               <form onsubmit="app.listController.addItem(event, '${this.id}')">
-                <div class="d-flex align-items-center">
+                <div id="add-item" class="d-flex align-items-center">
                   <input
                     type="text"
                     name="item"
@@ -42,7 +41,7 @@ export default class List {
               </form>
             </div>
           </div>
-        </div>`;
+    `;
   }
 
   drawItems() {

@@ -9,3 +9,17 @@
   position: absolute;
   right: 1.2em;
 }
+
+.card {
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+}
+
+li > .btn-blank,
+#add-item > .btn-blank {
+  right: 1.7em;
+}
+
+.card-header > .btn-blank {
+  right: 0.7em;
+}
