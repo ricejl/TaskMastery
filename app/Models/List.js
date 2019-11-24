@@ -50,7 +50,7 @@ export default class List {
     this.items.forEach(item => (template += item.template));
     return template;
   }
-  // FIXME to write items into list use ${this.drawItems()}
+
   //Be sure to add the methods needed to create the view template for this model
   //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
 }

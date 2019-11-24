@@ -26,7 +26,9 @@ class ListService {
   }
 
   deleteList(listId) {
-    _store.State.lists.splice(listId, 1);
+    let foundList = _store.State.lists.find(list => list.id == listId);
+    let listIndex = _store.State.lists.indexOf(foundList);
+    _store.State.lists.splice(listIndex, 1);
     _store.saveState();
   }
   //TODO  Here is where we handle all of our business logic,
