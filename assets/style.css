@@ -2,9 +2,30 @@
   min-height: 70vh;
 }
 
+main {
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-family: "Berkshire Swash", cursive;
+}
+
 .card {
   display: inline-block;
   -webkit-column-break-inside: avoid;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0.8em;
+}
+
+label[for="item"] {
+  padding-left: 0.5em;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
 }
 
 /* SECTION button styling */
@@ -34,10 +55,5 @@ li > .btn-blank {
 }
 
 .card-header > .btn-blank:hover {
-  color: rgb(165, 65, 65);
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0.8em;
+  color: rgb(163, 86, 86);
 }

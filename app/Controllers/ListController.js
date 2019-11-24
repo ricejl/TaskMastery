@@ -56,5 +56,22 @@ export default class ListController {
     ListService.deleteList(listId);
     _drawLists();
   }
-  //TODO: Your app will need the ability to create, and delete both lists and listItems
+
+  // deleteList(listId) {
+  //   Swal.fire({
+  //     title: "Are you sure?",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Yes, delete it!"
+  //   }).then(result => {
+  //     if (result.value) {
+  //       return;
+  //     }
+  //   });
+
+  //   ListService.deleteList(listId);
+  //   _drawLists();
+  // }
 }

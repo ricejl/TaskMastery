@@ -14,6 +14,10 @@
       integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40="
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Karla&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Task Mastery</title>
   </head>
@@ -26,7 +30,7 @@
         </div>
       </div>
     </header>
-    <main class="container-fluid bg-secondary">
+    <main class="container-fluid bg-dark">
       <div class="row p-3 pr-5">
         <div id="add-list" class="col-12 col-sm-6 col-md-4">
           <form onsubmit="app.listController.addList(event)">
@@ -75,8 +79,17 @@
               <div class="card-body">
                 <ul id="items" class="card-text">
                   <li>
-                    <input type="checkbox" />
-                    item
+                    <input type="checkbox" /><label for="item"> item</label>
+                    <button
+                      class="btn-blank"
+                      type="button"
+                      onclick="app.ListController.deleteItem()"
+                    >
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <input type="checkbox" /><label for="item"> item</label>
                     <button
                       class="btn-blank"
                       type="button"
@@ -120,6 +133,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
