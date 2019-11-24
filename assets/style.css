@@ -8,6 +8,11 @@
   outline: none;
   position: absolute;
   right: 1.2em;
+  opacity: 0.5;
+}
+
+.btn-blank:hover {
+  opacity: 0.9;
 }
 
 .card {
@@ -22,4 +27,8 @@ li > .btn-blank,
 
 .card-header > .btn-blank {
   right: 0.7em;
+}
+
+.card-header > .btn-blank:hover {
+  color: rgb(165, 65, 65);
 }
