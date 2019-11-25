@@ -9,7 +9,7 @@ export default class Item {
 
   get template() {
     return `
-            <li><input type="checkbox" /><label for="item"> ${this.item}</label>
+            <li><input type="checkbox" /><label for="item">${this.item}</label>
             <button class="btn-blank" type="button" onclick="app.listController.deleteItem('${this.listId}', '${this.itemId}')">
                 <i class="fa fa-times"></i>
             </button></li>
