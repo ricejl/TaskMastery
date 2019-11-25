@@ -25,13 +25,14 @@ class ListService {
     _store.saveState();
   }
 
-  deleteList(listId) {
+  deleteList(listId, callback) {
     let foundList = _store.State.lists.find(list => list.id == listId);
     let listIndex = _store.State.lists.indexOf(foundList);
     _store.State.lists.splice(listIndex, 1);
     _store.saveState();
+    callback();
   }
-  //TODO  Here is where we handle all of our business logic,
+  //NOTE  Here is where we handle all of our business logic,
   //given the information you need in the controller,
   //what methods will you need to do when this class is first 'constructed'?
   //NOTE You will need this code to persist your data into local storage, be sure to call the store method to save after each change
